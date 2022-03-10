@@ -1,0 +1,103 @@
+* {
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+:root {
+  --background-color: #fff;
+  --background-keyboard-color: #efefef;
+  --text-color: #121213;
+}
+
+.dark-theme {
+  --background-color: #292c35;
+  --background-keyboard-color: #3f4452;
+  --text-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: background 0.2s linear;
+}
+
+h1 {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: center;
+  margin: 20px;
+  transition: background 0.2s linear;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: background 0.2s linear;
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-wrapper div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.theme-button {
+  transition: background 0.2s linear;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: var(--background-keyboard-color);
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10%;
+  color: var(--text-color);
+  background-color: var(--background-keyboard-color);
+  transition: background 0.2s linear;
+}
