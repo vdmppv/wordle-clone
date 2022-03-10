@@ -33,15 +33,13 @@ function initBoard() {
 
 initBoard()
 
-let toggleBtn = document.getElementById("theme");
-
-toggleBtn.addEventListener("click", (e) => {
-  if (e.pointerType === "mouse") { // fixed the bug when works when enter key is pressed
+const chk = document.getElementById('chk');
+chk.addEventListener('change', (e) => {
+ // fixed the bug when works when enter key is pressed
     body.classList.toggle("dark-theme");
     keyboard.classList.toggle("dark-theme");
     localStorage.setItem("wordle-theme", keyboard.classList.contains("dark-theme") ? "dark-theme" : "light-theme");
-  }
-})
+});
 
 document.addEventListener("keyup", (e) => {
   if (guessesRemaining === 0) return;

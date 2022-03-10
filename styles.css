@@ -28,8 +28,60 @@ h1 {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: center;
-  margin: 20px;
+  margin: 20px 20px 20px 0;
   transition: background 0.2s linear;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label { 
+	background-color: #3f4452;
+	border-radius: 18px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 13px;
+	width: 39px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 18px;
+	width: 18px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(25px);
+}
+
+
+.fa-moon {
+  margin-top: 1px;
+	color: #f1c40f;
+}
+
+.fa-sun {
+  margin-top: 1px;
+	color: #f39c12;
 }
 
 #game-board {
